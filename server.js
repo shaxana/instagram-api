@@ -7,9 +7,9 @@ const bodyParser = require('body-parser')
 const cors = require('cors')
 const userRouter = require("./src/router/userRouter")
 
+app.use(cors())
 app.use(bodyParser.json())
 app.use("/", userRouter)
-app.use(cors())
 
 
 app.listen(port, () => {
