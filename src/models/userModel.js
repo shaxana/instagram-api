@@ -2,14 +2,15 @@ const mongoose = require("mongoose");
 
 const userSchema = mongoose.Schema(
   {
-    id: String,
+    id: Number,
     username: String,
     surname: String,
     email: String,
     password: String,
     isPublic: Boolean,
     posts:[
-      {imgSRC:String,
+      {imgID:Number,
+        imgSRC:String,
       title:String}
     ],
     followers: Array,
