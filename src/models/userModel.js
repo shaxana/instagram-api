@@ -2,27 +2,24 @@ const mongoose = require("mongoose");
 
 const userSchema = mongoose.Schema(
   {
-    id: Number,
+    id:Number,
     username: String,
     surname: String,
     email: String,
     password: String,
     isPublic: Boolean,
-    posts:[
-      {imgID:Number,
-        imgSRC:String,
-      title:String}
-    ],
+    posts: [{ imgID  : Number, imgSRC: String, title: String }],
     followers: Array,
-    following:Array,
-    blockList:Array,
-    stories:Array,
-    notifications:Array,
-    bio:{
-      info:String,
-      country:String
+    following: Array,
+    blockList: Array,
+    stories: Array,
+    notifications: Array,
+    bio: {
+    
+      info: String,
+      country: String,
     },
-    isAdmin: Boolean
+    isAdmin: Boolean,
   },
   { collection: "Users", timestamps: true }
 );
